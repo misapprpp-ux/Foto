@@ -4,7 +4,6 @@ import os
 
 FILENAME = "tasks.txt"
 
-# --------- Funcții ----------
 def load_tasks():
     if not os.path.exists(FILENAME):
         return []
@@ -73,7 +72,6 @@ def filter_done():
 def filter_todo():
     update_listbox("todo")
 
-# --------- GUI ----------
 root = tk.Tk()
 root.title("To-Do App")
 root.geometry("450x550")
@@ -96,7 +94,6 @@ listbox = tk.Listbox(root, font=("Segoe UI", 14), bg="white", activestyle="none"
 listbox.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
 listbox.bind("<Double-Button-1>", toggle_done)
 
-# Filtre
 frame_filter = tk.Frame(root, bg="#f0f4f8")
 frame_filter.pack(pady=5)
 
@@ -109,8 +106,8 @@ btn_done.grid(row=0, column=1, padx=5)
 btn_todo = tk.Button(frame_filter, text="Unfinished", command=filter_todo, bg="#86192C", fg="white", width=10)
 btn_todo.grid(row=0, column=2, padx=5)
 
-# --------- Datele și actualizare ----------
 tasks = load_tasks()
 update_listbox()
 
 root.mainloop()
+
