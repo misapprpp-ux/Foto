@@ -1,27 +1,93 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Games Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Portfolio - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
-<canvas id="gameCanvas"></canvas>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="lebenslauf.html">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <select id="languageSelect" class="language-select">
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ro">Română</option>
+                    </select>
+                    <button id="themeToggle" class="theme-toggle" title="Toggle dark mode">🌙</button>
+                </div>
+            </div>
+        </header>
 
-<div id="menu">
-    <h1>Mini Games Portfolio</h1>
-    <button class="gameBtn" data-game="rocket">Atmospheric Rocket</button>
-    <button class="gameBtn" data-game="flappy">Flappy Rocket</button>
-    <button class="gameBtn" data-game="shooter">Space Shooter</button>
-</div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 data-i18n="hero.title">Welcome to My IT Portfolio</h1>
+                    <p data-i18n="hero.subtitle">Beginner IT-Developer</p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary" data-i18n="hero.viewProjects">View My Projects</a>
+                        <a href="contact.html" class="btn btn-secondary" data-i18n="hero.contact">Get in Touch</a>
+                    </div>
+                </div>
+            </section>
 
-<div id="gameOver" class="hidden">
-    <h2>Game Over!</h2>
-    <p id="finalScore"></p>
-    <button id="backBtn">Back to Menu</button>
-</div>
+            <!-- Featured Projects -->
+            <section class="featured-projects">
+                <div class="section-container">
+                    <h2 data-i18n="home.featuredProjects">Featured Projects</h2>
+                    <div class="projects-grid" id="featuredProjectsGrid">
+                        <!-- Projects will be loaded here by JS -->
+                    </div>
+                    <div class="section-footer">
+                        <a href="projects.html" class="btn btn-outline" data-i18n="home.viewAll">View All Projects</a>
+                    </div>
+                </div>
+            </section>
 
-<script src="script.js"></script>
+            <!-- About Preview -->
+            <section class="about-preview">
+                <div class="section-container">
+                    <h2 data-i18n="home.aboutMe">About Me</h2>
+                    <p data-i18n="home.aboutText">I'm a passionate developer with expertise in modern web technologies. I create elegant solutions to complex problems and love building user-friendly applications.</p>
+                    <a href="about.html" class="btn btn-outline" data-i18n="home.learnMore">Learn More About Me</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <p>&copy; 2025 IT Portfolio. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="contact.html" data-i18n="footer.contact">Contact</a>
+                    <a href="about.html" data-i18n="footer.about">About</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

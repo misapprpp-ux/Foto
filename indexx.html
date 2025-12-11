@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Games Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+
+<div id="menu">
+    <h1>Mini Games Portfolio</h1>
+    <button class="gameBtn" data-game="rocket">Atmospheric Rocket</button>
+    <button class="gameBtn" data-game="flappy">Flappy Rocket</button>
+    <button class="gameBtn" data-game="shooter">Space Shooter</button>
+</div>
+
+<div id="gameOver" class="hidden">
+    <h2>Game Over!</h2>
+    <p id="finalScore"></p>
+    <button id="backBtn">Back to Menu</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
